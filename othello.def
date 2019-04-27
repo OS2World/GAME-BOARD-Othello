@@ -1,0 +1,11 @@
+NAME Othello WINDOWAPI
+
+DESCRIPTION 'Othello (C) Peter Wansch, 1994.'
+
+STUB 'os2stub.exe'
+
+DATA MULTIPLE
+
+STACKSIZE   32768
+HEAPSIZE    32768
+

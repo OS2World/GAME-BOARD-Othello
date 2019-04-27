@@ -1,0 +1,53 @@
+# IBM Developer's Workframe/2 Make File Creation run at 03:12:00 on 01/30/94
+
+# Make File Creation run in directory:
+#   C:\SOURCE\OTHELLO;
+
+# Assumed INCLUDE environment variable path:
+#   C:\MUGLIB;
+#   C:\SQLLIB;
+#   C:\IBMCPP\INCLUDE;
+#   C:\IBMCPP\IBMCLASS;
+#   C:\TOOLKT20\CPLUS\OS2H;
+#   C:\TOOLKT20\C\OS2H;
+#   C:\TOOLKT20\ASM\OS2INC;
+#   C:\SOURCE\OTHELLO;
+#   C:\GUIDE\SYS;
+
+
+INCLUDE002=.
+INCLUDE002=$(INCLUDE002);$(INCLUDE)
+
+INCLUDE001=$(INCLUDE)
+
+INCLUDE000=.
+INCLUDE000=$(INCLUDE000);$(INCLUDE)
+
+
+othello.RES:  othello.rc  \
+   {$(INCLUDE002)}OTHELLO.H  \
+#    {$(INCLUDE002)}OS2.H  \
+#    {$(INCLUDE002)}STDIO.H  \
+#    {$(INCLUDE002)}STDLIB.H  \
+   OTHELLO.ICO  \
+   CROSS.PTR  \
+   OTHELLO.DLG  \
+     OTHELLO.H  \
+   MAKEFILE
+
+othello.HLP:  othello.ipf  \
+   MAKEFILE
+
+alg.OBJ:  alg.c  \
+   {$(INCLUDE000)}othello.h  \
+#    {$(INCLUDE001)}os2.h  \
+#    {$(INCLUDE001)}stdio.h  \
+#    {$(INCLUDE001)}stdlib.h  \
+   MAKEFILE
+
+othello.OBJ:  othello.c  \
+   {$(INCLUDE000)}othello.h  \
+#    {$(INCLUDE001)}os2.h  \
+#    {$(INCLUDE001)}stdio.h  \
+#    {$(INCLUDE001)}stdlib.h  \
+   MAKEFILE

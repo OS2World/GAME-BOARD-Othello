@@ -1,0 +1,96 @@
+DLGINCLUDE 1 "othello.h"
+
+#ifdef GERMAN
+DLGTEMPLATE DB_PRODINFO PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Produktinformation", DB_PRODINFO, -30, -12, 170, 75,
+            FS_MOUSEALIGN, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ICON            WD_MAIN, ICO_MAIN, 10, 52, 16, 16, WS_GROUP
+        LTEXT           "Entertainment Pack fÅr OS/2", ID_NULL, 35, 60, 130,
+                        8
+        LTEXT           "Othello, Version 1.0", ID_NULL, 35, 50, 130, 8
+        CTEXT           "Copyright (C) Peter Wansch, 1994.", ID_NULL, 4, 25, 
+                        162, 8
+        CTEXT           "Alle Rechte vorbehalten.", ID_NULL, 4, 35, 162, 8
+        DEFPUSHBUTTON   "~OK", RETURN_ERROR, 4, 4, 50, 14
+        PUSHBUTTON      "Hilfe", PB_HELP, 64, 4, 50, 14, BS_HELP |
+                        BS_NOPOINTERFOCUS
+    END
+END
+#else
+DLGTEMPLATE DB_PRODINFO PRELOAD MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Product information", DB_PRODINFO, -30, -12, 170, 75, 
+            FS_MOUSEALIGN, FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        ICON            WD_MAIN, ICO_MAIN, 10, 52, 16, 16, WS_GROUP
+        LTEXT           "Entertainment Pack for OS/2", ID_NULL, 35, 60, 130,
+                        8
+        LTEXT           "Othello, Version 1.0", ID_NULL, 35, 50, 130, 8
+        CTEXT           "Copyright (C) Peter Wansch, 1994.", ID_NULL, 4, 25, 
+                        162, 8
+        CTEXT           "All rights reserved.", ID_NULL, 4, 35, 162, 8
+        DEFPUSHBUTTON   "~OK", RETURN_ERROR, 4, 4, 50, 14
+        PUSHBUTTON      "Help", PB_HELP, 64, 4, 50, 14, BS_HELP |
+                        BS_NOPOINTERFOCUS
+    END
+END
+#endif
+
+#ifdef GERMAN
+DLGTEMPLATE DB_EVE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Ton", DB_EVE, -30, -12, 200, 128, FS_MOUSEALIGN | WS_VISIBLE,
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        AUTOCHECKBOX    "~Ton", CB_EVESOUNDS, 10, 111, 180, 10
+        LISTBOX         LB_EVE, 10, 48, 86, 59, LS_NOADJUSTPOS | 
+                        LS_HORZSCROLL
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LISTBOX         LB_EVESOUNDS, 104, 48, 86, 59, LS_NOADJUSTPOS | 
+                        LS_HORZSCROLL
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        RTEXT           "Lautst.", -1, 10, 30, 34, 8
+        CONTROL         "", SL_EVESOUNDS, 48, 28, 110, 12, WC_SLIDER, 
+                        SLS_HORIZONTAL | SLS_CENTER | SLS_RIBBONSTRIP | 
+                        SLS_HOMELEFT | SLS_PRIMARYSCALE1 | WS_GROUP | 
+                        WS_TABSTOP | WS_VISIBLE
+                        CTLDATA 12, 0, 101, 0, 0, 0
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+        PUSHBUTTON      "#14000", PB_PLAYEVE, 168, 28, 22, 14, BS_NOPOINTERFOCUS | BS_ICON
+        DEFPUSHBUTTON   "~OK", RETURN_ERROR, 4, 4, 50, 14
+        PUSHBUTTON      "~Abbruch", DID_CANCEL, 64, 4, 50, 14
+        PUSHBUTTON      "Hilfe", PB_HELP, 124, 4, 50, 14, BS_HELP |
+                        BS_NOPOINTERFOCUS
+    END
+END
+#else
+DLGTEMPLATE DB_EVE LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Sound", DB_EVE, -30, -12, 200, 128, FS_MOUSEALIGN | WS_VISIBLE, 
+            FCF_SYSMENU | FCF_TITLEBAR
+    BEGIN
+        AUTOCHECKBOX    "~Sound", CB_EVESOUNDS, 10, 111, 180, 10
+        LISTBOX         LB_EVE, 10, 48, 86, 59, LS_NOADJUSTPOS | 
+                        LS_HORZSCROLL
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        LISTBOX         LB_EVESOUNDS, 104, 48, 86, 59, LS_NOADJUSTPOS | 
+                        LS_HORZSCROLL
+                        PRESPARAMS PP_FONTNAMESIZE, "8.Helv"
+        RTEXT           "Volume", -1, 10, 30, 34, 8
+        CONTROL         "", SL_EVESOUNDS, 48, 28, 110, 12, WC_SLIDER, 
+                        SLS_HORIZONTAL | SLS_CENTER | SLS_RIBBONSTRIP | 
+                        SLS_HOMELEFT | SLS_PRIMARYSCALE1 | WS_GROUP | 
+                        WS_TABSTOP | WS_VISIBLE
+                        CTLDATA 12, 0, 101, 0, 0, 0
+                        PRESPARAMS PP_FOREGROUNDCOLOR, 0x00FF0000L
+        PUSHBUTTON      "#14000", PB_PLAYEVE, 168, 28, 22, 14, BS_NOPOINTERFOCUS | BS_ICON
+        DEFPUSHBUTTON   "~OK", DID_OK, 4, 4, 50, 14
+        PUSHBUTTON      "~Cancel", DID_CANCEL, 64, 4, 50, 14
+        PUSHBUTTON      "Help", PB_HELP, 124, 4, 50, 14, BS_HELP |
+                        BS_NOPOINTERFOCUS
+    END
+END
+#endif
+
