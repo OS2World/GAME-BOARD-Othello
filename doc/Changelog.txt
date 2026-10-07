@@ -1,0 +1,41 @@
+Othello for OS/2 - Changelog
+============================
+
+Version 1.1  (2026-09-11)
+--------------------------
+- Ported from IBM VisualAge C++ (ICC) to Open Watcom C
+- Removed compile-time GERMAN switch; replaced with 6-language runtime
+  support: English, Espanol, Nederlands, Deutsch, Francais, Italiano
+- Language selection saved to ENTRTAIN.INI across sessions
+- Added standard menu items per OS2World game conventions:
+    Game menu: Hint (Ctrl+H), Pause (Ctrl+P), Quit Game (Ctrl+Q),
+               Exit (Ctrl+X)
+    Options menu: Language submenu, Save settings on exit,
+                  Background Run (Ctrl+B), Frame Controls (Ctrl+F)
+- Removed splash screen (dpProdInfo dialog); replaced with standard
+  About dialog accessible from Help menu
+- Added BLDLEVEL string for version identification
+- Window created invisible, then positioned and shown centered on screen
+- Standard folder layout: src/, bin/, doc/, help/, legacy/
+- Build scripts: makefile.wat and compile-wat.cmd for Open Watcom
+- Background Run: game pauses on focus loss when option is off
+- Frame Controls: toggle title bar, system menu, minimize/maximize,
+  and menu bar in a single keystroke (Ctrl+F); the controls are parked in a
+  hidden frame and the board keeps its size
+- Online help in six languages (help\Othello_xx.hlp, in the help folder next
+  to the exe); the help changes with the language. New help panels for Quit
+  Game, Exit, Language, Save settings on exit and Frame Controls; keys help
+  updated
+- The window now appears fully painted at start-up (the help instance is
+  created before the window is shown)
+- Help menu items are translated
+
+Version 1.0  (1994)
+--------------------
+- Original release by Peter Wansch
+- IBM VisualAge C++ / ICC build
+- English and German language support via compile-time #define GERMAN
+- Three AI difficulty levels: Beginner, Advanced, Master
+- MMPM/2 WAV sound support via epsound.dll
+- 16 background colors selectable from bitmap menu items
+- IPF online help system

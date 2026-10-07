@@ -1,0 +1,13 @@
+DLGTEMPLATE IDD_ABOUT
+     {
+     DIALOG "About Othello", IDD_ABOUT, 32, 24, 240, 110,, FCF_TITLEBAR|FCF_DLGBORDER
+          {
+          CTEXT "Othello for OS/2",                   -1, 10, 90, 220, 8
+          CTEXT "Version 1.1",                        -1, 10, 78, 220, 8
+          CTEXT "OpenWatcom Release",                 -1, 10, 66, 220, 8
+          CTEXT "(c) 1994, Peter Wansch",             -1, 10, 54, 220, 8
+          CTEXT "(c) 2026, OS2World",                 -1, 10, 42, 220, 8
+          CTEXT "BSD 3-Clause License",               -1, 10, 30, 220, 8
+          DEFPUSHBUTTON "Close" DID_OK,                   98, 10, 44, 14, WS_GROUP
+          }
+     }

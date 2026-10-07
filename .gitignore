@@ -1,0 +1,16 @@
+# Open Watcom build output
+bin/*.obj
+bin/*.exe
+bin/*.res
+bin/*.map
+bin/*.err
+
+# Compile log
+compile-wat.log
+
+# OS/2 WPS shadow/EA files
+*.SHADOW
+
+# Editor backup files
+*.bak
+*~
