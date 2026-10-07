@@ -2,6 +2,8 @@
 
 Classic Reversi board game for OS/2 Presentation Manager.
 
+![Othello ScreenShot](/doc/Othello.png)
+
 **Version:** 1.1
 **Original author:** Peter Wansch (1994)
 **OW port:** OS2World (2026)
