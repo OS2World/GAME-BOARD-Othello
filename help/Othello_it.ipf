@@ -31,7 +31,7 @@ Informazioni correlate&colon.
 :p.
 Scegliere :hp2.Nuovo:ehp2. dal menu :hp2.Gioco:ehp2. per iniziare una nuova partita e scegliere il livello di gioco (Principiante, Avanzato o Maestro) dal menu :hp2.Opzioni:ehp2. Il livello attuale e indicato da un segno di spunta a sinistra della voce di menu.
 :p.
-Per collocare una pedina, portare il puntatore del mouse su una casella vuota. Il puntatore diventa una croce quando e possibile collocare una pedina su quella casella. Premere il pulsante sinistro del mouse per collocarla. Ci si puo anche spostare sulla scacchiera con i tasti freccia e premere Invio o la barra spaziatrice per collocare la pedina. Se il giocatore o il computer deve passare, viene mostrato un messaggio.
+Per collocare una pedina, portare il puntatore del mouse su una casella vuota. Il puntatore diventa una croce quando e possibile collocare una pedina su quella casella. Premere il pulsante sinistro del mouse per collocarla. Ci si puo anche spostare sulla scacchiera con i tasti freccia e premere Invio o la barra spaziatrice per collocare la pedina. Se il giocatore o il computer deve passare, viene mostrato un messaggio. Il pulsante del mouse si puo cambiare con Assegnazione tasti nel menu Opzioni.
 :p.
 Scegliere :hp2.Suggerimento:ehp2. per avere un suggerimento su una buona mossa. Scegliere :hp2.Computer inizia:ehp2. se si vuole che il computer faccia la prima mossa.
 
@@ -47,7 +47,7 @@ Entertainment Pack for OS/2
 .br
 Othello
 .br
-Versione 1.1
+Versione 1.2
 .br
 Copyright (C) Peter Wansch, 1994
 .br
@@ -127,6 +127,9 @@ Scegliere :hp2.Salva alla chiusura:ehp2. per conservare il livello, chi inizia, 
 :h2 res=2134.Aiuto per Controllo Cornice
 :p.
 Scegliere :hp2.Controllo Cornice:ehp2. (Ctrl+F) per nascondere la barra del titolo e il menu, lasciando solo la scacchiera. Premere di nuovo Ctrl+F per riaverli.
+:h2 res=2135.Aiuto per Assegnazione tasti
+:p.
+Scegliere :hp2.Assegnazione tasti...:ehp2. per scegliere il pulsante del mouse che colloca una pedina. Fare clic sulla casella, poi di nuovo con il pulsante da usare. :hp2.Predefinito:ehp2. ripristina il pulsante sinistro, :hp2.OK:ehp2. conserva la scelta e :hp2.Annulla:ehp2. la scarta. La scelta viene salvata con Salva alla chiusura. I tasti della tastiera non cambiano.
 :h1 res=2120.Aiuto per Aiuto
 :p.
 Usare il menu :hp2.Aiuto:ehp2. per ottenere informazioni di aiuto.

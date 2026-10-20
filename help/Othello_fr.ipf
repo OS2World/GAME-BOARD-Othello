@@ -31,7 +31,7 @@ Informations connexes&colon.
 :p.
 Choisissez :hp2.Nouveau:ehp2. dans le menu :hp2.Jeu:ehp2. pour commencer une nouvelle partie et choisissez le niveau de jeu (Debutant, Avance ou Maitre) dans le menu :hp2.Options:ehp2. Le niveau actuel est indique par une coche a gauche de l'element de menu.
 :p.
-Pour placer un pion, deplacez le pointeur de la souris sur une case vide. Le pointeur devient une croix quand vous pouvez placer un pion sur cette case. Appuyez sur le bouton gauche de la souris pour le placer. Vous pouvez aussi vous deplacer sur le plateau avec les touches fleches et appuyer sur Entree ou sur la barre d'espace pour placer un pion. Si vous ou l'ordinateur devez passer, un message s'affiche.
+Pour placer un pion, deplacez le pointeur de la souris sur une case vide. Le pointeur devient une croix quand vous pouvez placer un pion sur cette case. Appuyez sur le bouton gauche de la souris pour le placer. Vous pouvez aussi vous deplacer sur le plateau avec les touches fleches et appuyer sur Entree ou sur la barre d'espace pour placer un pion. Si vous ou l'ordinateur devez passer, un message s'affiche. Le bouton de la souris peut etre change avec Affectation des touches dans le menu Options.
 :p.
 Choisissez :hp2.Astuce:ehp2. pour obtenir une suggestion de bon coup. Choisissez :hp2.Ordinateur commence:ehp2. si vous voulez que l'ordinateur joue le premier coup.
 
@@ -47,7 +47,7 @@ Entertainment Pack for OS/2
 .br
 Othello
 .br
-Version 1.1
+Version 1.2
 .br
 Copyright (C) Peter Wansch, 1994
 .br
@@ -127,6 +127,9 @@ Choisissez :hp2.Sauvegarder a la fermeture:ehp2. pour conserver le niveau, le jo
 :h2 res=2134.Aide pour Controles du Cadre
 :p.
 Choisissez :hp2.Controles du Cadre:ehp2. (Ctrl+F) pour masquer la barre de titre et le menu et ne laisser que le plateau. Appuyez de nouveau sur Ctrl+F pour les retrouver.
+:h2 res=2135.Aide pour Affectation des touches
+:p.
+Choisissez :hp2.Affectation des touches...:ehp2. pour choisir le bouton de la souris qui pose un pion. Cliquez sur la case, puis cliquez dessus avec le bouton voulu. :hp2.Defaut:ehp2. restaure le bouton gauche, :hp2.OK:ehp2. conserve le choix et :hp2.Annuler:ehp2. l'abandonne. Le choix est enregistre avec Sauvegarder a la fermeture. Les touches du clavier ne changent pas.
 :h1 res=2120.Aide pour Aide
 :p.
 Utilisez le menu :hp2.Aide:ehp2. pour obtenir de l'aide.

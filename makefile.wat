@@ -26,7 +26,7 @@ $(TARGET): $(OBJS) $(DEF) $(RES)
     $(LINK) $(LFLAGS) name $(TARGET) file {$(OBJS)}
     $(RC) $(RES) $(TARGET)
 
-$(RES): src\othello.rc src\about.dlg src\sound.dlg &
+$(RES): src\othello.rc src\about.dlg src\sound.dlg src\keymap.dlg &
         src\othello.h src\lang.h &
         src\othello.ico src\play.ico src\cross.ptr &
         src\color0.bmp src\color1.bmp src\color2.bmp src\color3.bmp &

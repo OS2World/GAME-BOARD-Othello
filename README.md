@@ -2,7 +2,7 @@
 
 Classic Reversi board game for OS/2 Presentation Manager.
 
-**Version:** 1.1
+**Version:** 1.2
 **Original author:** Peter Wansch (1994)
 **OW port:** OS2World (2026)
 **License:** BSD 3-Clause
@@ -54,6 +54,7 @@ legacy\      - original 1994 ICC source files
 - 16 board background colors
 - WAV sound support via MMPM/2 and epsound.dll
 - Frame Controls (Ctrl+F) to hide/show title bar and menus
+- Key Mapping (Options > Key Mapping...): choose the mouse button that places a marker (left button by default)
 - Background Run (Ctrl+B) option
 - Settings persistence via ENTRTAIN.INI
 

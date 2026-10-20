@@ -31,7 +31,7 @@ Informacion relacionada&colon.
 :p.
 Elija :hp2.Nuevo:ehp2. en el menu :hp2.Juego:ehp2. para empezar una partida nueva y elija el nivel de juego, que puede ser Principiante, Avanzado o Maestro, en el menu :hp2.Opciones:ehp2. El nivel actual se indica con una marca a la izquierda de la opcion.
 :p.
-Para colocar una ficha, lleve el puntero del raton a una casilla vacia. El puntero cambia a una cruz cuando es posible colocar una ficha en esa casilla. Pulse el boton izquierdo del raton para colocarla. Tambien puede moverse por el tablero con las teclas de flecha y pulsar Intro o la barra espaciadora para colocar la ficha. Si usted o el ordenador tiene que pasar, se muestra un mensaje.
+Para colocar una ficha, lleve el puntero del raton a una casilla vacia. El puntero cambia a una cruz cuando es posible colocar una ficha en esa casilla. Pulse el boton izquierdo del raton para colocarla. Tambien puede moverse por el tablero con las teclas de flecha y pulsar Intro o la barra espaciadora para colocar la ficha. Si usted o el ordenador tiene que pasar, se muestra un mensaje. El boton del raton se puede cambiar con Asignacion de teclas en el menu Opciones.
 :p.
 Elija :hp2.Pista:ehp2. para obtener una sugerencia de buena jugada. Elija :hp2.Ordenador empieza:ehp2. si quiere que el ordenador haga la primera jugada.
 
@@ -47,7 +47,7 @@ Entertainment Pack for OS/2
 .br
 Othello
 .br
-Version 1.1
+Version 1.2
 .br
 Copyright (C) Peter Wansch, 1994
 .br
@@ -127,6 +127,9 @@ Elija :hp2.Guardar ajustes al salir:ehp2. para conservar el nivel, quien empieza
 :h2 res=2134.Ayuda de Controles de Marco
 :p.
 Elija :hp2.Controles de Marco:ehp2. (Ctrl+F) para ocultar la barra de titulo y el menu y dejar solo el tablero. Pulse Ctrl+F otra vez para recuperarlos.
+:h2 res=2135.Ayuda de Asignacion de teclas
+:p.
+Elija :hp2.Asignacion de teclas...:ehp2. para escoger el boton del raton que coloca una ficha. Haga clic en el cuadro y vuelva a hacer clic con el boton que quiera usar. :hp2.Por defecto:ehp2. restaura el boton izquierdo, :hp2.Aceptar:ehp2. conserva la eleccion y :hp2.Cancelar:ehp2. la descarta. La eleccion se guarda con Guardar ajustes al salir. Las teclas del teclado no cambian.
 :h1 res=2120.Ayuda de Ayuda
 :p.
 Use el menu :hp2.Ayuda:ehp2. para obtener informacion de ayuda.

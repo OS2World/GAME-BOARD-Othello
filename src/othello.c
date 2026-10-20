@@ -6,7 +6,7 @@
 #include "lang.h"
 
 static const char bldlevel[] =
-    "@#Peter Wansch:1.1#@##1## 11 Sep 2026 00:00:00      "
+    "@#Peter Wansch:1.2#@##1## 19 Oct 2026 00:00:00      "
     "ARCAOS:::0::::@@Othello for OS/2 - Reversi board game\r\n\x1a";
 
 /* ------------------------------------------------------------------ */
@@ -56,6 +56,9 @@ static PSZ pszDefWAVFiles[] = {
     "ILLEGAL.WAV","HINT.WAV","PASS.WAV","WON.WAV","LOST.WAV","DRAW.WAV"
 };
 
+/* Mouse button (1 left, 2 right, 3 middle) that places a marker (Key Mapping) */
+static int btn_place = 1;
+
 /* Frame controls */
 static HWND hwndTitleBar = NULLHANDLE;
 static HWND hwndSysMenu  = NULLHANDLE;
@@ -98,6 +101,12 @@ VOID load_settings(VOID)
     cb = sizeof(bSaveOnExit);
     if (!PrfQueryProfileData(hini, szApp, "SaveOnExit", &bSaveOnExit, &cb))
         bSaveOnExit = TRUE;
+
+    cb = sizeof(btn_place);
+    if (!PrfQueryProfileData(hini, szApp, "Button", &btn_place, &cb))
+        btn_place = 1;
+    if (btn_place < 1 || btn_place > 3)
+        btn_place = 1;
 }
 
 VOID save_settings(VOID)
@@ -108,6 +117,7 @@ VOID save_settings(VOID)
     PrfWriteProfileData(hini, szApp, "Sound",        &fSound,        sizeof(fSound));
     PrfWriteProfileData(hini, szApp, "Level",        &sLevel,        sizeof(sLevel));
     PrfWriteProfileData(hini, szApp, "SaveOnExit",   &bSaveOnExit,   sizeof(bSaveOnExit));
+    PrfWriteProfileData(hini, szApp, "Button",       &btn_place,     sizeof(btn_place));
     save_lang();
 }
 
@@ -175,6 +185,7 @@ VOID set_language(int lang)
         WinSendMsg(hwndSub, MM_SETITEMTEXT, MPFROMSHORT(IDM_COMPUTER),        MPFROMP(tr(STR_MENU_COMPUTER)));
         WinSendMsg(hwndSub, MM_SETITEMTEXT, MPFROMSHORT(IDM_SUBMENU_BGCOLOR), MPFROMP(tr(STR_MENU_BGCOLOR)));
         WinSendMsg(hwndSub, MM_SETITEMTEXT, MPFROMSHORT(IDM_SOUND),           MPFROMP(tr(STR_MENU_SOUND)));
+        WinSendMsg(hwndSub, MM_SETITEMTEXT, MPFROMSHORT(IDM_KEYMAP),          MPFROMP(tr(STR_MENU_KEYMAP)));
         WinSendMsg(hwndSub, MM_SETITEMTEXT, MPFROMSHORT(IDM_SUBMENU_LANG),    MPFROMP(tr(STR_MENU_LANGUAGE)));
         WinSendMsg(hwndSub, MM_SETITEMTEXT, MPFROMSHORT(IDM_SAVEONEXIT),      MPFROMP(tr(STR_MENU_SAVEONEXIT)));
         WinSendMsg(hwndSub, MM_SETITEMTEXT, MPFROMSHORT(IDM_FRAME),           MPFROMP(tr(STR_MENU_FRAME)));
@@ -207,7 +218,83 @@ VOID set_language(int lang)
 }
 
 /* ------------------------------------------------------------------ */
-/* Frame controls toggle (plan §16.10)                                  */
+/* Key Mapping: the mouse button that places a marker                   */
+/* ------------------------------------------------------------------ */
+
+#define WM_KM_INPUT   (WM_USER + 3)
+
+static PFNWP pfnKmEntry;
+
+/* Capture box: the first click only focuses it, a click on the focused box
+   assigns the mouse button used */
+static MRESULT EXPENTRY KmEntryProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2)
+{
+    SHORT btn = 0;
+
+    switch (msg) {
+    case WM_BUTTON1DOWN: btn = 1; break;
+    case WM_BUTTON2DOWN: btn = 2; break;
+    case WM_BUTTON3DOWN: btn = 3; break;
+    case WM_CHAR:
+        if (!(SHORT1FROMMP(mp1) & KC_KEYUP) &&
+            (SHORT1FROMMP(mp1) & KC_VIRTUALKEY) &&
+            (SHORT2FROMMP(mp2) == VK_TAB   || SHORT2FROMMP(mp2) == VK_BACKTAB ||
+             SHORT2FROMMP(mp2) == VK_ENTER || SHORT2FROMMP(mp2) == VK_NEWLINE ||
+             SHORT2FROMMP(mp2) == VK_ESC))
+            break;                          /* the dialog handles these */
+        return (MRESULT)TRUE;               /* swallow every other key  */
+    }
+    if (btn && WinQueryFocus(HWND_DESKTOP) == hwnd) {
+        WinPostMsg(WinQueryWindow(hwnd, QW_PARENT), WM_KM_INPUT,
+                   MPFROMLONG(btn), MPVOID);
+        return (MRESULT)TRUE;
+    }
+    return pfnKmEntry(hwnd, msg, mp1, mp2);
+}
+
+MRESULT EXPENTRY KeyMapDlgProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2)
+{
+    static int tmp;
+
+    switch (msg) {
+    case WM_INITDLG:
+        tmp = btn_place;
+        WinSetWindowText(hwnd, tr(STR_KM_TITLE));
+        WinSetDlgItemText(hwnd, IDC_KM_HINT,    tr(STR_KM_HINT));
+        WinSetDlgItemText(hwnd, IDC_KM_LABEL,   tr(STR_KM_ACT0));
+        WinSetDlgItemText(hwnd, DID_OK,         tr(STR_DLG_OK));
+        WinSetDlgItemText(hwnd, DID_CANCEL,     tr(STR_DLG_CANCEL));
+        WinSetDlgItemText(hwnd, IDC_KM_DEFAULT, tr(STR_KM_DEFAULT));
+        pfnKmEntry = WinSubclassWindow(WinWindowFromID(hwnd, IDC_KM_ENTRY), KmEntryProc);
+        WinSetDlgItemText(hwnd, IDC_KM_ENTRY, tr(STR_KM_BTN1 + tmp - 1));
+        return (MRESULT)FALSE;
+
+    case WM_KM_INPUT:
+        tmp = (int)LONGFROMMP(mp1);
+        WinSetDlgItemText(hwnd, IDC_KM_ENTRY, tr(STR_KM_BTN1 + tmp - 1));
+        return 0;
+
+    case WM_COMMAND:
+        switch (SHORT1FROMMP(mp1)) {
+        case DID_OK:
+            btn_place = tmp;
+            WinDismissDlg(hwnd, TRUE);
+            return 0;
+        case DID_CANCEL:
+            WinDismissDlg(hwnd, FALSE);
+            return 0;
+        case IDC_KM_DEFAULT:
+            tmp = 1;
+            WinSetDlgItemText(hwnd, IDC_KM_ENTRY, tr(STR_KM_BTN1));
+            return 0;
+        }
+        break;
+    }
+    return WinDefDlgProc(hwnd, msg, mp1, mp2);
+}
+
+/* ------------------------------------------------------------------ */
+/* Frame controls toggle (plan sec.16.10)                                  */
 /* ------------------------------------------------------------------ */
 
 VOID toggle_frame(VOID)
@@ -362,7 +449,7 @@ int main(VOID)
         WinCheckMenuItem(hm, IDM_SAVEONEXIT, bSaveOnExit);
     }
 
-    /* size and center window (plan §9) */
+    /* size and center window (plan sec.9) */
     cxScreen = WinQuerySysValue(HWND_DESKTOP, SV_CXSCREEN);
     cyScreen = WinQuerySysValue(HWND_DESKTOP, SV_CYSCREEN);
     winW = (cxScreen >= 800L) ? 800L : cxScreen;
@@ -546,7 +633,7 @@ MRESULT EXPENTRY wpMain(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2)
     case WM_SIZE:
         cxBlock = SHORT1FROMMP(mp2) / (DIVISIONS + 2);
         cyBlock = SHORT2FROMMP(mp2) / (DIVISIONS + 2);
-        /* WM_SIZE fires synchronously during WinSetWindowPos — ensure title
+        /* WM_SIZE fires synchronously during WinSetWindowPos - ensure title
            is correct each time the frame is resized or first shown */
         WinSetWindowText(hwndFrame, szApp);
         WinSetWindowText(hwndTitleBar, szApp);
@@ -596,6 +683,9 @@ MRESULT EXPENTRY wpMain(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2)
         return (MRESULT)TRUE;
 
     case WM_BUTTON1CLICK:
+    case WM_BUTTON2CLICK:
+    case WM_BUTTON3CLICK:
+        if ((msg == WM_BUTTON1CLICK ? 1 : msg == WM_BUTTON2CLICK ? 2 : 3) != btn_place) break;   /* not the mapped button */
         if (fThreadRunning) break;
         sX = SHORT1FROMMP(mp1) / cxBlock;
         sY = SHORT2FROMMP(mp1) / cyBlock;
@@ -801,6 +891,10 @@ MRESULT EXPENTRY wpMain(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2)
             break;
         case IDM_COMPUTER:
             if (!fThreadRunning) { fPlayerStarts = FALSE; WinSendMsg(hwnd, WM_COMMAND, MPFROM2SHORT(IDM_NEW,0), NULL); }
+            break;
+
+        case IDM_KEYMAP:
+            WinDlgBox(HWND_DESKTOP, hwnd, (PFNWP)KeyMapDlgProc, NULLHANDLE, IDD_KEYMAP, NULL);
             break;
 
         case IDM_SOUND:
@@ -1021,7 +1115,7 @@ MRESULT EXPENTRY wpMain(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2)
 }
 
 /* ------------------------------------------------------------------ */
-/* About dialog (plan §11)                                              */
+/* About dialog (plan sec.11)                                              */
 /* ------------------------------------------------------------------ */
 
 MRESULT EXPENTRY AboutDlgProc(HWND hwnd, ULONG msg, MPARAM mp1, MPARAM mp2)

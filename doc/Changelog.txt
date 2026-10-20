@@ -1,6 +1,16 @@
 Othello for OS/2 - Changelog
 ============================
 
+Version 1.2  (2026-10-19)
+--------------------------
+- New Options > Key Mapping... dialog (mouse only): choose the mouse button
+  that places a marker (left button by default); the other buttons are
+  ignored. The choice is saved in ENTRTAIN.INI with the other settings and
+  the dialog is translated in all six languages
+- Online help (all six languages) describes Key Mapping in a new topic
+  (Options menu) and in the "playing the game" text
+- About dialog, BLDLEVEL string and documentation updated to version 1.2
+
 Version 1.1  (2026-09-11)
 --------------------------
 - Ported from IBM VisualAge C++ (ICC) to Open Watcom C

@@ -31,7 +31,7 @@ Related information&colon.
 :p.
 Choose :hp2.New:ehp2. from the :hp2.Game:ehp2. menu to start a new game and select the level of play, which is either Beginner, Advanced or Master, by selecting the corresponding item on the :hp2.Options:ehp2. menu. The current level of play is indicated by a check mark left to the menu item.
 :p.
-To place a marker, move the mouse pointer to an empty square. The mouse pointer changes its shape to a cross to indicate that it would be possible for you to place a marker on the corresponding square. Press the left mouse button to place a marker. You can also use the arrow keys to move around the board. Press Enter, Return or Space to place a marker. If you or the computer has to pass, a message will be displayed.
+To place a marker, move the mouse pointer to an empty square. The mouse pointer changes its shape to a cross to indicate that it would be possible for you to place a marker on the corresponding square. Press the left mouse button to place a marker. You can also use the arrow keys to move around the board. Press Enter, Return or Space to place a marker. If you or the computer has to pass, a message will be displayed. The mouse button used can be changed with Key Mapping in the Options menu.
 :p.
 Choose :hp2.Hint:ehp2. to get a hint on a good move. Choose :hp2.Computer starts:ehp2. if you want the computer to make the first move.
 
@@ -47,7 +47,7 @@ Entertainment Pack for OS/2
 .br
 Othello
 .br
-Version 1.1
+Version 1.2
 .br
 Copyright (C) Peter Wansch, 1994
 .br
@@ -127,6 +127,9 @@ Choose :hp2.Save settings on exit:ehp2. to keep the level, the player who starts
 :h2 res=2134.Help for Frame Controls
 :p.
 Choose :hp2.Frame Controls:ehp2. (Ctrl+F) to hide the title bar and the menu, which leaves only the board. Press Ctrl+F again to bring them back.
+:h2 res=2135.Help for Key Mapping
+:p.
+Choose :hp2.Key Mapping...:ehp2. to select the mouse button that places a marker. Click the box, then click it again with the mouse button you want to use. :hp2.Default:ehp2. restores the left button, :hp2.OK:ehp2. keeps the choice and :hp2.Cancel:ehp2. discards it. The choice is saved with Save settings on exit. The keyboard keys are not affected.
 :h1 res=2120.Help for Help
 :p.
 Use the :hp2.Help:ehp2. menu to obtain help information.

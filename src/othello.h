@@ -32,6 +32,11 @@
 
 /* dialog IDs */
 #define IDD_ABOUT       501
+#define IDD_KEYMAP      502
+#define IDC_KM_HINT     530
+#define IDC_KM_LABEL    531
+#define IDC_KM_ENTRY    532
+#define IDC_KM_DEFAULT  533
 #define DB_EVE          12000
 
 /* help button */
@@ -95,6 +100,7 @@
 #define IDM_PLAYER      203
 #define IDM_COMPUTER    204
 #define IDM_SOUND       205
+#define IDM_KEYMAP      206
 #define IDM_SAVEONEXIT  210
 #define IDM_FRAME       212
 
@@ -162,6 +168,7 @@
 #define PANEL_OPTIONS_LANG      2132
 #define PANEL_OPTIONS_SAVE      2133
 #define PANEL_OPTIONS_FRAME     2134
+#define PANEL_OPTIONS_KEYMAP    2135
 
 /* game constants */
 #define ID_NULL         -1

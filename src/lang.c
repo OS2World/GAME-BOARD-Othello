@@ -19,7 +19,8 @@ const char *lang_strings[LANG_COUNT][STR_COUNT] = {
     "I must pass.", "You must pass.",
     "Othello Help Window",
     "Help ~index", "~General help", "~Keys help", "~Using help",
-    "The help file %s was not found.\nPlease put it in the help folder next to the program."
+    "The help file %s was not found.\nPlease put it in the help folder next to the program.",
+    "~Key Mapping...", "Key Mapping", "Click the box, then click it again with the mouse button to use.", "Place a marker", "Left button", "Right button", "Middle button", "Default", "OK", "Cancel"
   },
   { /* ES */
     "~Juego", "~Nuevo\tCtrl+N", "~Pista\tCtrl+H",
@@ -35,7 +36,8 @@ const char *lang_strings[LANG_COUNT][STR_COUNT] = {
     "Debo pasar.", "Debes pasar.",
     "Ventana de Ayuda Othello",
     "~Indice de ayuda", "Ayuda ~general", "Ayuda de ~teclas", "~Usar la ayuda",
-    "No se encontro el archivo de ayuda %s.\nPongalo en la carpeta help junto al programa."
+    "No se encontro el archivo de ayuda %s.\nPongalo en la carpeta help junto al programa.",
+    "~Asignacion de teclas...", "Asignacion de teclas", "Haga clic en el cuadro y de nuevo con el boton del raton que quiera usar.", "Colocar una ficha", "Boton izquierdo", "Boton derecho", "Boton central", "Por defecto", "Aceptar", "Cancelar"
   },
   { /* NL */
     "~Spel", "~Nieuw\tCtrl+N", "~Hint\tCtrl+H",
@@ -51,7 +53,8 @@ const char *lang_strings[LANG_COUNT][STR_COUNT] = {
     "Ik moet passen.", "U moet passen.",
     "Othello Help Venster",
     "Help~index", "~Algemene help", "~Toetsenhulp", "Help ~gebruiken",
-    "Het helpbestand %s is niet gevonden.\nPlaats het in de map help naast het programma."
+    "Het helpbestand %s is niet gevonden.\nPlaats het in de map help naast het programma.",
+    "Toetsen toe~wijzen...", "Toetsen toewijzen", "Klik op het vak en klik er nogmaals op met de muisknop die u wilt gebruiken.", "Steen plaatsen", "Linkerknop", "Rechterknop", "Middelste knop", "Standaard", "OK", "Annuleren"
   },
   { /* DE */
     "~Spiel", "~Neu\tCtrl+N", "~Hinweis\tCtrl+H",
@@ -67,7 +70,8 @@ const char *lang_strings[LANG_COUNT][STR_COUNT] = {
     "Ich muss passen.", "Sie muessen passen.",
     "Othello Hilfe Fenster",
     "Hilfe~index", "~Allgemeine Hilfe", "~Tastenhilfe", "Hilfe ~verwenden",
-    "Die Hilfedatei %s wurde nicht gefunden.\nBitte in den Ordner help neben dem Programm legen."
+    "Die Hilfedatei %s wurde nicht gefunden.\nBitte in den Ordner help neben dem Programm legen.",
+    "~Tastenzuordnung...", "Tastenzuordnung", "Klicken Sie auf das Feld und dann erneut mit der gewuenschten Maustaste.", "Stein setzen", "Linke Taste", "Rechte Taste", "Mittlere Taste", "Standard", "OK", "Abbrechen"
   },
   { /* FR */
     "~Jeu", "~Nouveau\tCtrl+N", "~Astuce\tCtrl+H",
@@ -83,7 +87,8 @@ const char *lang_strings[LANG_COUNT][STR_COUNT] = {
     "Je dois passer.", "Vous devez passer.",
     "Fenetre d'aide Othello",
     "~Index de l'aide", "Aide ~generale", "Aide des ~touches", "~Utiliser l'aide",
-    "Le fichier d'aide %s est introuvable.\nPlacez-le dans le dossier help a cote du programme."
+    "Le fichier d'aide %s est introuvable.\nPlacez-le dans le dossier help a cote du programme.",
+    "~Affectation des touches...", "Affectation des touches", "Cliquez sur la case, puis cliquez dessus avec le bouton de souris voulu.", "Poser un pion", "Bouton gauche", "Bouton droit", "Bouton central", "Defaut", "OK", "Annuler"
   },
   { /* IT */
     "~Gioco", "~Nuovo\tCtrl+N", "~Suggerimento\tCtrl+H",
@@ -99,6 +104,7 @@ const char *lang_strings[LANG_COUNT][STR_COUNT] = {
     "Devo passare.", "Deve passare.",
     "Finestra Aiuto Othello",
     "~Indice dell'aiuto", "Aiuto ~generale", "Aiuto ~tasti", "~Usare l'aiuto",
-    "Il file di aiuto %s non e stato trovato.\nMetterlo nella cartella help accanto al programma."
+    "Il file di aiuto %s non e stato trovato.\nMetterlo nella cartella help accanto al programma.",
+    "Assegnazione ~tasti...", "Assegnazione tasti", "Fai clic sulla casella, poi di nuovo con il pulsante del mouse da usare.", "Posiziona una pedina", "Pulsante sinistro", "Pulsante destro", "Pulsante centrale", "Predefinito", "OK", "Annulla"
   }
 };

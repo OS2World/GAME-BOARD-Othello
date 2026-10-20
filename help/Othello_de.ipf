@@ -31,7 +31,7 @@ Zusaetzliche Information&colon.
 :p.
 Waehlen Sie :hp2.Neu:ehp2. aus dem :hp2.Spiel:ehp2.-Menue, um ein neues Spiel zu beginnen. Waehlen Sie die Stufe (Anfaenger, Fortgeschritten oder Meister), indem Sie den entsprechenden Eintrag im :hp2.Optionen:ehp2.-Menue markieren. Die aktuelle Stufe ist durch ein Haekchen links neben dem Menueeintrag gekennzeichnet.
 :p.
-Um einen Spielstein zu plazieren, positionieren Sie den Mauszeiger auf dem gewuenschten, leeren Feld. Falls es sich um einen gueltigen Zug handelt, wird der Mauszeiger zu einem Kreuz. Jetzt koennen Sie das Feld anklicken, um einen Spielstein zu plazieren. Sie koennen auch die Pfeiltasten verwenden, um sich ueber das Spielbrett zu bewegen, und dann die Eingabe- oder Leertaste druecken. Falls Sie oder der Computer passen muessen, wird eine entsprechende Nachricht angezeigt.
+Um einen Spielstein zu plazieren, positionieren Sie den Mauszeiger auf dem gewuenschten, leeren Feld. Falls es sich um einen gueltigen Zug handelt, wird der Mauszeiger zu einem Kreuz. Jetzt koennen Sie das Feld anklicken, um einen Spielstein zu plazieren. Sie koennen auch die Pfeiltasten verwenden, um sich ueber das Spielbrett zu bewegen, und dann die Eingabe- oder Leertaste druecken. Falls Sie oder der Computer passen muessen, wird eine entsprechende Nachricht angezeigt. Die Maustaste laesst sich mit Tastenzuordnung im Menue Optionen aendern.
 :p.
 Waehlen Sie :hp2.Hinweis:ehp2., um einen Hinweis auf einen guten Zug zu erhalten. Waehlen Sie :hp2.Computer beginnt:ehp2., falls Sie moechten, dass der Computer den ersten Zug macht.
 
@@ -47,7 +47,7 @@ Entertainment Pack for OS/2
 .br
 Othello
 .br
-Version 1.1
+Version 1.2
 .br
 Copyright (C) Peter Wansch, 1994
 .br
@@ -127,6 +127,9 @@ Waehlen Sie :hp2.Einstellungen speichern:ehp2., um die Stufe, den beginnenden Sp
 :h2 res=2134.Hilfe zu Rahmensteuerung
 :p.
 Waehlen Sie :hp2.Rahmensteuerung:ehp2. (Ctrl+F), um die Titelleiste und das Menue auszublenden, so dass nur das Spielbrett bleibt. Druecken Sie Ctrl+F noch einmal, um sie zurueckzuholen.
+:h2 res=2135.Hilfe zu Tastenzuordnung
+:p.
+Waehlen Sie :hp2.Tastenzuordnung...:ehp2., um die Maustaste festzulegen, mit der ein Spielstein gesetzt wird. Klicken Sie auf das Feld und dann erneut mit der gewuenschten Maustaste. :hp2.Standard:ehp2. stellt die linke Taste wieder her, :hp2.OK:ehp2. behaelt die Auswahl und :hp2.Abbrechen:ehp2. verwirft sie. Die Auswahl wird mit Einstellungen speichern gesichert. Die Tasten der Tastatur bleiben unveraendert.
 :h1 res=2120.Hilfe zu Hilfe
 :p.
 Verwenden Sie das :hp2.Hilfe:ehp2.-Menue, um Hilfeinformationen zu erhalten.

@@ -1,7 +1,7 @@
 Othello for OS/2
 ================
 
-Version 1.1
+Version 1.2
 
 Othello (also known as Reversi) is a classic two-player strategy board game.
 This version runs natively on OS/2 Presentation Manager and includes an
@@ -41,7 +41,8 @@ flipped to your color. The player with the most pieces when the board
 is full wins.
 
 Controls:
-  Left mouse button  - place a piece
+  Left mouse button  - place a piece (the button can be changed in
+                       Options > Key Mapping)
   Ctrl+N             - new game
   Ctrl+H             - hint
   Ctrl+P             - pause
@@ -63,6 +64,11 @@ Player/Computer starts - choose who makes the first move.
 Background color - 16 color choices for the board background.
 
 Sound - configure WAV files and volume for game events.
+
+Key Mapping - choose the mouse button that places a piece: click the
+              box, then click it again with the mouse button to use
+              (left button by default). The keyboard keys are not
+              affected. The choice is saved with the other settings.
 
 Language - choose from English, Espanol, Nederlands, Deutsch,
            Francais, or Italiano.

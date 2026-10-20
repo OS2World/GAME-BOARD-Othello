@@ -31,7 +31,7 @@ Verwante informatie&colon.
 :p.
 Kies :hp2.Nieuw:ehp2. in het menu :hp2.Spel:ehp2. om een nieuw spel te beginnen en kies het niveau (Beginner, Gevorderd of Meester) in het menu :hp2.Opties:ehp2. Het huidige niveau is aangegeven met een vinkje links van het menu-item.
 :p.
-Om een steen te leggen, zet u de muisaanwijzer op een leeg veld. De aanwijzer verandert in een kruis als u op dat veld een steen kunt leggen. Druk op de linkermuisknop om de steen te leggen. U kunt ook met de pijltoetsen over het bord bewegen en op Enter of de spatiebalk drukken om te leggen. Moet u of de computer passen, dan verschijnt een bericht.
+Om een steen te leggen, zet u de muisaanwijzer op een leeg veld. De aanwijzer verandert in een kruis als u op dat veld een steen kunt leggen. Druk op de linkermuisknop om de steen te leggen. U kunt ook met de pijltoetsen over het bord bewegen en op Enter of de spatiebalk drukken om te leggen. Moet u of de computer passen, dan verschijnt een bericht. De muisknop kan worden gewijzigd met Toetsen toewijzen in het menu Opties.
 :p.
 Kies :hp2.Hint:ehp2. voor een tip voor een goede zet. Kies :hp2.Computer begint:ehp2. als u wilt dat de computer de eerste zet doet.
 
@@ -47,7 +47,7 @@ Entertainment Pack for OS/2
 .br
 Othello
 .br
-Versie 1.1
+Versie 1.2
 .br
 Copyright (C) Peter Wansch, 1994
 .br
@@ -127,6 +127,9 @@ Kies :hp2.Instellingen bewaren bij afsluiten:ehp2. om het niveau, wie begint, de
 :h2 res=2134.Help bij Kaderinstelling
 :p.
 Kies :hp2.Kaderinstelling:ehp2. (Ctrl+F) om de titelbalk en het menu te verbergen, zodat alleen het bord overblijft. Druk nogmaals op Ctrl+F om ze terug te halen.
+:h2 res=2135.Help bij Toetsen toewijzen
+:p.
+Kies :hp2.Toetsen toewijzen...:ehp2. om de muisknop te kiezen waarmee een steen wordt gelegd. Klik op het vak en klik er nogmaals op met de gewenste muisknop. :hp2.Standaard:ehp2. herstelt de linkerknop, :hp2.OK:ehp2. bewaart de keuze en :hp2.Annuleren:ehp2. verwerpt ze. De keuze wordt bewaard met Instellingen bewaren bij afsluiten. De toetsen van het toetsenbord blijven ongewijzigd.
 :h1 res=2120.Help bij Help
 :p.
 Gebruik het menu :hp2.Help:ehp2. voor hulpinformatie.
